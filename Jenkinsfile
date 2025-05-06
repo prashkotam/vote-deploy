@@ -8,7 +8,7 @@ node {
     stage('Update GIT') {
         script {
             catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE') {
-                withCredentials([usernamePassword(credentialsId: 'prashkotam', 
+                withCredentials([usernamePassword(credentialsId: '6b909541-89a5-4387-9964-acdc80e4f1c6', 
                                                   passwordVariable: 'GIT_PASSWORD', 
                                                   usernameVariable: 'GIT_USERNAME')]) {
                     // Configure Git user details
