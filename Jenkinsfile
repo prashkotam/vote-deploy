@@ -12,13 +12,13 @@ node {
                                                   passwordVariable: 'GIT_PASSWORD', 
                                                   usernameVariable: 'GIT_USERNAME')]) {
                     // Configure Git user details
-                    sh "git config user.email yourGitHubEmail@email.com"
-                    sh "git config user.name yourGitHubUsername"
+                    sh "git config user.email prashanth.kotamraju@gmail.com"
+                    sh "git config user.name prashkotam"
 
                     // Display and modify the YAML file
                     sh "cat vote-ui-deployment.yaml"
                     sh """
-                        sed -i 's+dockerHubUserName/vote.*+dockerHubUsername/vote:${DOCKERTAG}+g' vote-ui-deployment.yaml
+                        sed -i 's+prashkotam/vote.*+prashkotam/vote:${DOCKERTAG}+g' vote-ui-deployment.yaml
                     """
                     sh "cat vote-ui-deployment.yaml"
 
